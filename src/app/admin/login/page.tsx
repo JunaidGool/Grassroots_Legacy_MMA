@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { useAuth } from "@/hooks/useAuth";
@@ -34,9 +35,14 @@ export default function AdminLoginPage() {
     <div className="flex-1 flex items-center justify-center min-h-[60vh]">
       <div className="w-full max-w-sm">
         <div className="text-center mb-8">
-          <div className="w-16 h-16 gold-gradient rounded-full flex items-center justify-center text-dark-900 font-heading font-bold text-xl mx-auto mb-4">
-            GL
-          </div>
+          <Image
+            src="/logo/grass_roots_logo.jpeg"
+            alt="Grassroots Legacy MMA"
+            width={96}
+            height={96}
+            className="rounded-full ring-2 ring-gold-500/40 mx-auto mb-4"
+            priority
+          />
           <h1 className="text-2xl font-heading font-bold text-foreground">
             Admin Access
           </h1>

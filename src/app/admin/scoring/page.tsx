@@ -238,6 +238,122 @@ export default function ScoringPage() {
         </div>
       )}
 
+      {/* How Scoring & Rankings Work */}
+      <Card>
+        <CardContent className="py-5 px-5 space-y-5">
+          <h2 className="text-lg font-heading font-bold text-foreground uppercase tracking-wider">
+            How Scoring & Rankings Work
+          </h2>
+
+          {/* Points Table */}
+          <div>
+            <h3 className="text-sm font-heading font-semibold text-dark-200 uppercase tracking-wider mb-2">
+              Points per Bout
+            </h3>
+            <div className="overflow-hidden rounded-lg border border-border">
+              <table className="w-full text-sm">
+                <thead>
+                  <tr className="bg-dark-700">
+                    <th className="text-left py-2 px-3 text-dark-200 font-heading font-semibold text-xs uppercase tracking-wider">Outcome</th>
+                    <th className="text-center py-2 px-3 text-dark-200 font-heading font-semibold text-xs uppercase tracking-wider">Winner</th>
+                    <th className="text-center py-2 px-3 text-dark-200 font-heading font-semibold text-xs uppercase tracking-wider">Loser</th>
+                  </tr>
+                </thead>
+                <tbody className="divide-y divide-border">
+                  <tr className="hover:bg-dark-700/40">
+                    <td className="py-2 px-3 text-foreground">Submission</td>
+                    <td className="py-2 px-3 text-center text-gold-400 font-bold">5</td>
+                    <td className="py-2 px-3 text-center text-muted">1</td>
+                  </tr>
+                  <tr className="hover:bg-dark-700/40">
+                    <td className="py-2 px-3 text-foreground">TKO / KO</td>
+                    <td className="py-2 px-3 text-center text-gold-400 font-bold">4</td>
+                    <td className="py-2 px-3 text-center text-muted">1</td>
+                  </tr>
+                  <tr className="hover:bg-dark-700/40">
+                    <td className="py-2 px-3 text-foreground">Unanimous Decision</td>
+                    <td className="py-2 px-3 text-center text-gold-400 font-bold">3</td>
+                    <td className="py-2 px-3 text-center text-muted">1</td>
+                  </tr>
+                  <tr className="hover:bg-dark-700/40">
+                    <td className="py-2 px-3 text-foreground">Split Decision</td>
+                    <td className="py-2 px-3 text-center text-gold-400 font-bold">2</td>
+                    <td className="py-2 px-3 text-center text-muted">1</td>
+                  </tr>
+                  <tr className="hover:bg-dark-700/40">
+                    <td className="py-2 px-3 text-foreground">Draw</td>
+                    <td className="py-2 px-3 text-center text-muted" colSpan={2}>2 each</td>
+                  </tr>
+                  <tr className="hover:bg-dark-700/40">
+                    <td className="py-2 px-3 text-foreground">No Contest</td>
+                    <td className="py-2 px-3 text-center text-muted" colSpan={2}>0 each</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <p className="text-xs text-muted mt-2">
+              Every fighter who competes earns at least 1 point, even in a loss. Finishes (SUB, TKO) are rewarded more than decisions.
+            </p>
+          </div>
+
+          {/* Bonuses */}
+          <div>
+            <h3 className="text-sm font-heading font-semibold text-dark-200 uppercase tracking-wider mb-2">
+              Bonus Awards
+            </h3>
+            <div className="space-y-2">
+              <div className="flex items-start gap-3 bg-dark-700/40 rounded-lg p-3">
+                <span className="text-gold-400 font-bold text-lg leading-none mt-0.5">+1</span>
+                <div>
+                  <p className="text-sm font-semibold text-foreground">Fight of the Night</p>
+                  <p className="text-xs text-muted">Both fighters receive +1 bonus point. Awarded to the most exciting bout on the card.</p>
+                </div>
+              </div>
+              <div className="flex items-start gap-3 bg-dark-700/40 rounded-lg p-3">
+                <span className="text-gold-400 font-bold text-lg leading-none mt-0.5">+2</span>
+                <div>
+                  <p className="text-sm font-semibold text-foreground">Performance of the Night</p>
+                  <p className="text-xs text-muted">The winner receives +2 bonus points. Awarded for a standout individual performance.</p>
+                </div>
+              </div>
+            </div>
+            <p className="text-xs text-muted mt-2">
+              A single bout can receive both awards. Maximum possible points in one fight: 5 (SUB) + 1 (FOTN) + 2 (POTN) = <strong className="text-gold-400">8 points</strong>.
+            </p>
+          </div>
+
+          {/* Rankings */}
+          <div>
+            <h3 className="text-sm font-heading font-semibold text-dark-200 uppercase tracking-wider mb-2">
+              How Rankings Are Determined
+            </h3>
+            <p className="text-sm text-muted mb-2">
+              Fighters are ranked within their division (age category + weight class + gender) using these tiebreakers in order:
+            </p>
+            <ol className="list-decimal list-inside text-sm text-muted space-y-1 pl-1">
+              <li><strong className="text-foreground">Total points</strong> — accumulated across all scored bouts</li>
+              <li><strong className="text-foreground">Average points per bout</strong> — rewards consistency at any number of fights</li>
+              <li><strong className="text-foreground">Number of finishes</strong> — wins by Submission or TKO/KO</li>
+              <li><strong className="text-foreground">Prior fight experience</strong> — fighters with more amateur experience rank higher</li>
+            </ol>
+          </div>
+
+          {/* Title Eligibility */}
+          <div>
+            <h3 className="text-sm font-heading font-semibold text-dark-200 uppercase tracking-wider mb-2">
+              Title Eligibility
+            </h3>
+            <p className="text-sm text-muted">
+              A fighter becomes <span className="text-gold-400 font-semibold">Title Eligible</span> when they meet <strong className="text-foreground">both</strong> conditions:
+            </p>
+            <ul className="list-disc list-inside text-sm text-muted space-y-1 mt-1 pl-1">
+              <li>Competed in <strong className="text-foreground">2 or more</strong> scored bouts</li>
+              <li>Ranked in the <strong className="text-foreground">top 2</strong> of their division</li>
+            </ul>
+          </div>
+        </CardContent>
+      </Card>
+
       {/* Score Modal */}
       {scoring && (
         <Modal

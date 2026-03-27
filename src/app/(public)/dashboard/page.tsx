@@ -11,6 +11,7 @@ import type { Matchup } from "@/types/matchup";
 import type { Fighter } from "@/types/fighter";
 import type { Score } from "@/types/score";
 import { OUTCOME_LABELS } from "@/types/score";
+import Image from "next/image";
 import Link from "next/link";
 
 interface DashboardData {
@@ -74,7 +75,15 @@ export default function DashboardPage() {
   return (
     <div className="space-y-6">
       {/* Event Header */}
-      <div className="text-center space-y-2">
+      <div className="text-center space-y-3">
+        <Image
+          src="/logo/grass_roots_logo.jpeg"
+          alt="Grassroots Legacy MMA"
+          width={120}
+          height={120}
+          className="rounded-full ring-2 ring-gold-500/50 mx-auto shadow-lg shadow-gold-500/10"
+          priority
+        />
         <h1 className="text-3xl sm:text-4xl font-heading font-bold gold-gradient-text">
           {config.EVENT_NAME}
         </h1>

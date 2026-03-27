@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
@@ -24,10 +25,15 @@ export function Header() {
   return (
     <header className="sticky top-0 z-40 bg-dark-900/95 backdrop-blur-sm border-b border-border">
       <div className="flex items-center justify-between px-4 py-3 max-w-5xl mx-auto">
-        <Link href="/dashboard" className="flex items-center gap-3">
-          <div className="w-8 h-8 gold-gradient rounded-full flex items-center justify-center text-dark-900 font-heading font-bold text-xs">
-            GL
-          </div>
+        <Link href="/dashboard" className="flex items-center gap-2">
+          <Image
+            src="/logo/grass_roots_logo.jpeg"
+            alt="Grassroots Legacy MMA"
+            width={44}
+            height={44}
+            className="rounded-full ring-2 ring-gold-500/40"
+            priority
+          />
           <span className="font-heading text-lg font-semibold tracking-wide text-foreground hidden sm:block">
             GRASSROOTS LEGACY
           </span>
