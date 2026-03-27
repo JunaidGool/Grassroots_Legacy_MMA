@@ -39,6 +39,22 @@ export async function POST(req: NextRequest) {
     }
 
     const store = await getStore();
+
+    // Check for duplicate (same name + gender + age category)
+    const existing = await store.fighters.getAll();
+    const duplicate = existing.find(
+      (f) =>
+        f.name.toLowerCase() === parsed.data.name.toLowerCase() &&
+        f.gender === parsed.data.gender &&
+        f.ageCat === parsed.data.ageCat
+    );
+    if (duplicate) {
+      return NextResponse.json(
+        { success: false, error: `${parsed.data.name} is already registered in ${parsed.data.ageCat} (${parsed.data.gender})` },
+        { status: 409 }
+      );
+    }
+
     const fighter = await store.fighters.create({ ...parsed.data, weightClass: wc });
 
     return NextResponse.json({ success: true, data: fighter } satisfies ApiResponse<Fighter>, { status: 201 });
