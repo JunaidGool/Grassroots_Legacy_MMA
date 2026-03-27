@@ -32,14 +32,18 @@ export const createFighterSchema = z.object({
   medical: medicalStatusSchema.default("pending"),
 });
 
-export const createMatchupSchema = z.object({
-  fighter1: z.string().min(1),
-  fighter2: z.string().min(1),
-  ageCat: ageCategorySchema,
-  weightClass: z.string().min(1),
-  gender: genderSchema,
-  boutNumber: z.number().int().min(1),
-});
+export const createMatchupSchema = z
+  .object({
+    fighter1: z.string().min(1),
+    fighter2: z.string().min(1),
+    ageCat: ageCategorySchema,
+    weightClass: z.string().min(1),
+    gender: genderSchema,
+    boutNumber: z.number().int().min(1),
+  })
+  .refine((data) => data.fighter1 !== data.fighter2, {
+    message: "A fighter cannot fight themselves",
+  });
 
 export const createScoreSchema = z.object({
   matchupId: z.string().min(1),
