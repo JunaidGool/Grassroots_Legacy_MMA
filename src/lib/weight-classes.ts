@@ -42,6 +42,7 @@ const SENIOR_MALE_CLASSES: WeightClassDef[] = [
   { name: "Middleweight", maxKg: 83.9 },
   { name: "Light Heavyweight", maxKg: 93.0 },
   { name: "Heavyweight", maxKg: 120.2 },
+  { name: "Super Heavyweight", maxKg: 999 },
 ];
 
 // Youth A / Adult Jnr / Adults — Women
