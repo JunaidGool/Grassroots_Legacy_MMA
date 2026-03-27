@@ -20,6 +20,13 @@ export const metadata: Metadata = {
   title: "Grassroots Legacy MMA",
   description:
     "Developmental amateur MMA — fighter registration, matchmaking, scoring & rankings",
+  manifest: "/manifest.json",
+  themeColor: "#d4a843",
+  appleWebApp: {
+    capable: true,
+    statusBarStyle: "black-translucent",
+    title: "GL MMA",
+  },
 };
 
 export default function RootLayout({

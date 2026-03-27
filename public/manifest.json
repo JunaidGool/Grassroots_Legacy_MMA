@@ -1,0 +1,22 @@
+{
+  "name": "Grassroots Legacy MMA",
+  "short_name": "GL MMA",
+  "description": "Developmental amateur MMA — fighter registration, matchmaking, scoring & rankings",
+  "start_url": "/dashboard",
+  "display": "standalone",
+  "background_color": "#0a0a0a",
+  "theme_color": "#d4a843",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "/logo/grass_roots_logo.jpeg",
+      "sizes": "192x192",
+      "type": "image/jpeg"
+    },
+    {
+      "src": "/logo/grass_roots_logo.jpeg",
+      "sizes": "512x512",
+      "type": "image/jpeg"
+    }
+  ]
+}
