@@ -1,0 +1,68 @@
+[
+  {
+    "matchupId": "m_001",
+    "redId": "f_001",
+    "blueId": "f_002",
+    "outcome": "sub",
+    "winnerId": "f_001",
+    "redPts": 6,
+    "bluePts": 2,
+    "fotn": true,
+    "potn": false
+  },
+  {
+    "matchupId": "m_002",
+    "redId": "f_003",
+    "blueId": "f_004",
+    "outcome": "ud",
+    "winnerId": "f_003",
+    "redPts": 3,
+    "bluePts": 1,
+    "fotn": false,
+    "potn": false
+  },
+  {
+    "matchupId": "m_003",
+    "redId": "f_005",
+    "blueId": "f_006",
+    "outcome": "tko",
+    "winnerId": "f_005",
+    "redPts": 6,
+    "bluePts": 1,
+    "fotn": false,
+    "potn": true
+  },
+  {
+    "matchupId": "m_004",
+    "redId": "f_007",
+    "blueId": "f_008",
+    "outcome": "sd",
+    "winnerId": "f_008",
+    "redPts": 1,
+    "bluePts": 2,
+    "fotn": false,
+    "potn": false
+  },
+  {
+    "matchupId": "m_005",
+    "redId": "f_009",
+    "blueId": "f_010",
+    "outcome": "draw",
+    "winnerId": "",
+    "redPts": 2,
+    "bluePts": 2,
+    "fotn": false,
+    "potn": false
+  },
+  {
+    "matchupId": "m_006",
+    "redId": "f_011",
+    "blueId": "f_012",
+    "outcome": "sub",
+    "winnerId": "f_011",
+    "redPts": 8,
+    "bluePts": 2,
+    "fotn": true,
+    "potn": true
+  }
+]
